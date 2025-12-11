@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Missing X-Frame-Options Header",
+    "date": "2025-12-10",
+    "severity": "Low",
+    "description": "The X-Frame-Options header is missing from the response, which could allow clickjacking attacks.",
+    "mitigation": "Enable the X-Frame-Options header.",
+    "impact": "ClickJacking",
+    "references": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options",
+    "active": true,
+    "verified": true
+  },
+  {
+    "title": "Self-Signed SSL Certificate",
+    "date": "2025-12-10",
+    "severity": "Medium",
+    "description": "The SSL certificate used by this host is self-signed and not trusted.",
+    "mitigation": "Use a certificate from a trusted CA.",
+    "impact": "Man-In-The-Middle attacks",
+    "references": "https://letsencrypt.org/",
+    "active": true,
+    "verified": true
+  }
+]
