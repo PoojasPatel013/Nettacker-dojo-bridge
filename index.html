@@ -282,6 +282,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="🛡️ Verifying Authenticity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 The Signature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -349,6 +366,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="🛡️ Verifying Authenticity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 The Signature
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -395,15 +429,18 @@ finding = {
 </code></pre>
 <h2 id="verifying-authenticity">🛡️ Verifying Authenticity</h2>
 <p><strong>"How do I know these results are real?"</strong></p>
-<p>The tool implements a <strong>Digital Provenance Stamp</strong> to ensure the integrity of your data. Every finding imported by this tool is automatically modified to include:</p>
+<p>The tool implements a <strong>Digital Provenance Stamp</strong> to ensure the integrity of your data. Every finding imported by this tool is automatically modified to include a verification footer.</p>
+<p><img alt="Provenance Footer" src="screenshots/provenance.png" title="Digital Provenance Verification" /></p>
+<h3 id="the-signature">📝 The Signature</h3>
+<p>Every finding gets appended with:</p>
 <ol>
-<li><strong>Origin Footer</strong>: The description is appended with a bridge signature, including the scan ID and source tool.
+<li><strong>Origin Footer</strong>: Signature including the Scan ID and Source Tool.
     <code>text
     --------------------------------------------------
     **Origin:** Automated Import via Nettacker-DefectDojo Bridge
     **Source Tool:** OWASP Nettacker
     **Scan ID:** Automated Scan</code></li>
-<li><strong>Automated Tags</strong>: Findings are tagged with <code>nettacker</code>, <code>automated</code>, and <code>defectdojo-bridge</code> for easy filtering and reporting.</li>
+<li><strong>Automated Tags</strong>: Findings are tagged with <code>nettacker</code>, <code>automated</code>, and <code>defectdojo-bridge</code> for easy filtering.</li>
 </ol>
 <p>This ensures that auditors can distinguish between manually entered findings and those verified by the automated scanner.</p>
 <hr />
