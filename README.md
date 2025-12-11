@@ -2,13 +2,13 @@
 
 A working prototype that bridges **OWASP Nettacker** scan results with **DefectDojo** for automated vulnerability management.
 
-## 🚀 Features
+## Feature
 - Parses JSON output from Nettacker.
 - Automates finding ingestion into DefectDojo via API v2.
 - Handles finding deduplication (handled by DefectDojo).
 - Includes professional documentation and verification steps.
 
-## 🛠️ Quick Start
+## Quick Start
 
 ### 1. Installation
 ```bash
@@ -28,7 +28,7 @@ mkdocs serve
 ```
 Then open `http://127.0.0.1:8000` to view the guide.
 
-## 📂 Project Structure
+## Project Structure/ Dir
 - `bridge.py`: The core script pushing data to DefectDojo.
 - `nettacker_results.json`: Sample vulnerability data for testing.
 - `docs/`: Source for the documentation site.
