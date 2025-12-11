@@ -4,13 +4,20 @@ import argparse
 import os
 import sys
 
+from dotenv import load_dotenv
+
 # Config
 # -----------------------------------------------------------------------------
 # In a real scenario, use environment variables:
 # DOJO_API_KEY = os.environ.get('DD_API_KEY')
 # -----------------------------------------------------------------------------
-DOJO_URL = "http://localhost:8080/api/v2"
-API_KEY = "01b42d0c9fec74472fe2cff259f6fb0d0022d761"  # User provided key
+load_dotenv()
+DOJO_URL = os.environ.get("DOJO_URL", "http://localhost:8080/api/v2")
+API_KEY = os.environ.get("DOJO_API_KEY")
+
+if not API_KEY:
+    print("❌ Error: DOJO_API_KEY not found in environment variables or .env file.")
+    sys.exit(1)
 
 def import_scan(scan_file, engagement_id):
     print(f"[*] Reading scan file: {scan_file}")

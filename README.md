@@ -12,7 +12,7 @@ A working prototype that bridges **OWASP Nettacker** scan results with **DefectD
 
 ### 1. Installation
 ```bash
-pip install requests mkdocs mkdocs-material
+pip install requests mkdocs mkdocs-material python-dotenv
 ```
 
 ### 2. Usage
@@ -35,8 +35,9 @@ Then open `http://127.0.0.1:8000` to view the guide.
 - `mkdocs.yml`: Configuration for the walkthrough site.
 
 ## ⚠️ Configuration
-Open `bridge.py` and set your API key:
-```python
-API_KEY = "YOUR_API_KEY_HERE"
+Create a `.env` file in the root directory:
+```env
+DOJO_URL=http://localhost:8080/api/v2
+DOJO_API_KEY=your_api_key_here
 ```
-Or use environment variables for better security.
+This keeps your credentials secure and out of the source code.

@@ -21,6 +21,23 @@ The workflow is simple yet powerful:
 2.  **Transform**: The `bridge.py` script normalizes the data for compatibility.
 3.  **Push**: Results are securely uploaded to your DefectDojo Engagement.
 
+### 1. Installation
+    ```bash
+    pip install requests python-dotenv
+    ```
+
+### 2. Configuration
+    Create a `.env` file in the project root:
+    ```env
+    DOJO_URL=http://localhost:8080/api/v2
+    DOJO_API_KEY=your_api_key_here
+    ```
+
+### 3. Run the Bridge
+    ```bash
+    python bridge.py --file nettacker_results.json --engagement 7
+    ```
+
 ```python
 # The Secret Sauce (Snippet from bridge.py)
 finding = {
