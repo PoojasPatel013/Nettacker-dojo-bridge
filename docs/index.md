@@ -36,16 +36,21 @@ finding = {
 
 **"How do I know these results are real?"**
 
-The tool implements a **Digital Provenance Stamp** to ensure the integrity of your data. Every finding imported by this tool is automatically modified to include:
+The tool implements a **Digital Provenance Stamp** to ensure the integrity of your data. Every finding imported by this tool is automatically modified to include a verification footer.
 
-1.  **Origin Footer**: The description is appended with a bridge signature, including the scan ID and source tool.
+![Provenance Footer](screenshots/provenance.png "Digital Provenance Verification")
+
+### 📝 The Signature
+Every finding gets appended with:
+
+1.  **Origin Footer**: Signature including the Scan ID and Source Tool.
     ```text
     --------------------------------------------------
     **Origin:** Automated Import via Nettacker-DefectDojo Bridge
     **Source Tool:** OWASP Nettacker
     **Scan ID:** Automated Scan
     ```
-2.  **Automated Tags**: Findings are tagged with `nettacker`, `automated`, and `defectdojo-bridge` for easy filtering and reporting.
+2.  **Automated Tags**: Findings are tagged with `nettacker`, `automated`, and `defectdojo-bridge` for easy filtering.
 
 This ensures that auditors can distinguish between manually entered findings and those verified by the automated scanner.
 
